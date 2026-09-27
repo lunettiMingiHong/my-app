@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Average Distance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div><p class="eyebrow">INTERACTIVE COORDINATE STUDY</p><h1>Average<br><em>Distance</em></h1></div>
+      <p class="rule">100 × 100 좌표 위에 점을 찍고, 목표점까지의 평균 거리를 측정해 보세요.</p>
+    </header>
+    <section class="playground">
+      <div class="canvas-wrap"><canvas id="board" aria-label="점 입력 좌표계"></canvas><p class="tap">CLICK TO PLACE A POINT</p></div>
+      <aside class="panel">
+        <div class="score-card"><p>AVERAGE DISTANCE</p><strong id="target-distance">—</strong><span>목표점까지의 평균 거리</span></div>
+        <dl><div><dt>POINTS</dt><dd id="point-count">0</dd></div><div><dt>PATH LENGTH</dt><dd id="path-length">0.0 m</dd></div><div><dt>SHAPE AREA</dt><dd id="shape-area">—</dd></div></dl>
+        <p class="tip"><b>RULE</b>첫 번째 점 위에 커서를 올리면 색이 바뀝니다. 점이 3개 이상일 때 첫 점을 클릭하면 도형이 완성돼요.</p>
+        <div class="actions"><button id="undo">한 점 지우기</button><button id="reset">처음부터</button></div>
+      </aside>
+    </section>
+    <section class="summary"><span>YOUR TRACE</span><p id="summary-copy">아직 첫 점을 기다리고 있어요.</p></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+
